@@ -62,9 +62,9 @@ def get_inbound(day_outbound,price_outbound): #volta
             price_inbound = each_day_2.find('div', class_='price').text
             print('\n' + 'Dia Volta: ' + day_inbound)
             print('Preço: ' + price_inbound)
-            total= (int(price_inbound.replace('R$ ','').replace('.','')) + int(price_outbound.replace('R$ ','').replace('.','')) + tax)
+            total = (int(price_inbound.replace('R$ ','').replace('.','')) + int(price_outbound.replace('R$ ','').replace('.','')) + tax)
+            csv_writer.writerow([str(year), str(month_1), str(day_outbound), str(price_outbound),str(month_2), str(day_inbound), str(price_inbound),str("R$ "+str(total))])
 
-            csv_writer.writerow([str(year), str(month_1), str(day_outbound), str(price_outbound),str(month_2), str(price_inbound), str(price_inbound),str("R$ "+total)])
     print('===========')
 
 def Main():
