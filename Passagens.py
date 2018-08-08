@@ -1,5 +1,3 @@
-from typing import TextIO
-
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import csv
